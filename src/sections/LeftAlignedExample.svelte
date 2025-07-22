@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import * as Highcharts from "highcharts";
     import "highcharts/modules/exporting";
     import { Chart } from "@highcharts/svelte";
@@ -27,12 +29,8 @@
             color: "#ff99fc",
         },
         {
-            name: "Group 3",
+            name: "All Groups",
             data: [
-                [1990, 4],
-                [2000, 3],
-                [2010, 0],
-                [2020, 3],
             ],
             color: "#4096fa",
         },
@@ -43,32 +41,41 @@
 
     let options = {
         chart: {
-            type: "spline",
-            backgroundColor: "#e3ff00",
+            type: "column",
+            backgroundColor: "#ffffff",
             borderColor: "#007052",
-            borderWidth: 5,
+            borderWidth: 1,
             borderRadius: 20,
         },
         title: {
-            text: "Another Example Chart",
+            text: "Percentage of 18-28 yr olds by race that received support to pay tuition (2021)",
+            fontSize: 1.55,
+        }, 
+        xAxis:{
+            categories:['Black','Hispanic','White']
         },
-        subtitle: {
-            text: "With a subtitle! And styling!",
-        },
-        series: [series[0], series[1]],
+        series:[
+            {
+                name:"% that received tuition payment aid",
+                data: [
+                 {
+                        y:10.2,
+                    },
+                {
+                    y:8.0,
+                },{
+                    y:17.2,
+                },
+                ]
+            },
+
+            ],
+        
+        
+        
     };
 
-    function toggleThirdSeries() {
-        const existingSeries = chart.series.find((s) => s.name === "Group 3");
 
-        if (existingSeries) {
-            existingSeries.remove();
-            thirdSeriesVisible = false;
-        } else {
-            chart.addSeries(series[2]);
-            thirdSeriesVisible = true;
-        }
-    }
 </script>
 
 <div>
@@ -77,51 +84,42 @@
             <div class="chart">
                 <Chart bind:chart {options} highcharts={Highcharts} />
             </div>
-            <button on:click={toggleThirdSeries} class="toggle-button">
-                {thirdSeriesVisible ? "Remove Group 3" : "Add Group 3"}
-            </button>
+            
             <div>
                 <p>
-                    You can use Svelte to add and remove data from a Highcharts
-                    chart.
+                    This chart indicates the differences in percentages that receive support in funding their education. <a href=" https://blackwealthdata.org/explore/assets"> (BWDC) </a>
                 </p>
                 <p>
-                    When you click the button above, a third group is toggled in
-                    the chart. Check out the source code to see how it's done.
+                    This statistic suggests that minority groups experience greater educational disadvantages due to the lack of financial assistance. Similarly, on average, minority groups inherit less money from their families. 
                 </p>
                 <p>
                     <strong
-                        >🤔 How might you use other HTML elements, like
-                        checkboxes or radio buttons, in a similar way to filter
-                        data?</strong
-                    >
+                        >63% out of 194 studies on the effectiveness of affirmative action demonstrated positive results on the livelihoods of racial minorities</strong> <a href = "unu.edu/article/affirmativr-action-policies-increase-diversity-are-successful-controversial-around-world"> (United Nations University)</a>
+                    
                 </p>
             </div>
         {/snippet}
 
         {#snippet scrolly()}
             <ArticleText>
-                You might notice that this basic template doesn't have certain
-                features that are common in scrollytelling.
+                Despite evidence demonstrating the systematic barriers faced by minority groups, Affirmative Action remains a controversial topic 
             </ArticleText>
 
             <ArticleText>
-                For example, you might want a component that doesn't feature a
-                sticky component at all. Or a component that is solely a sticky
-                component.
+                Public opinion in the United States is divided on the implementational of race-based preferential selection
             </ArticleText>
 
             <ArticleText>
-                You might also want to add more interactivity or gamify parts of
-                your scrollytelling piece.
+                In 2022, <strong> 36%</strong> of survey respondents supported Affirmative Action and <strong>29%</strong> were against it <a href="https://www.pewresearch.org/short-reads/2023/06/16/americans-and-affirmative-action-how-the-public-sees-the-consideration-of-race-in-college-admissions-hiring/">(Pew Research Center)</a>
             </ArticleText>
 
             <ArticleText>
                 <strong>
-                    It's up to you to research how to create the effects and
-                    functionality that you envision!
+                    Wealth inequalities still remain prevalent
                 </strong>
             </ArticleText>
+
+        
         {/snippet}
     </Scroller>
 </div>
@@ -132,21 +130,7 @@
         margin: 0px auto;
     }
 
-    .toggle-button {
-        margin: 20px;
-        padding: 20px;
-        color: #007052;
-        background-color: #0bd956;
-        border: solid 2px #007052;
-        border-radius: 16px;
-        font-size: large;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow: 0 4px 0 #007052;
-    }
 
-    .toggle-button:active {
-        transform: translateY(2px);
-        box-shadow: 0 2px 0 #007052;
-    }
+    
+    
 </style>

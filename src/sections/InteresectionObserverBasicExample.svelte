@@ -33,63 +33,22 @@
         {#snippet sticky()}
             <div>
                 <p>
-                    This section shows how to use the
-                    <code>{"<ObservedArticleText>"} component.</code>
-                </p>
-                <p>
-                    The <code>{"<ObservedArticleText>"}</code>
-                    component is very similar to the
-                    <code>{"<ArticleText>"}</code>
-                    component, but it also creates and uses an
-                    <a
-                        href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
-                    >
-                        Intersection Observer
-                    </a>.
-                </p>
-                <p>
-                    That Intersection Observer object "watches" the element. We
-                    can use it to answer the question:
-                    <br /><br />
-                    <strong
-                        >"Is this element currently visible in the browser
-                        window?"</strong
-                    >
-                    <br /><br />
-                    <strong> How does it work?</strong> When some specified percentage of
-                    the element crosses into or out of the viewport of this
-                    browser window, a
-                    <strong> callback function </strong> is called.
-                </p>
-                <p>
-                    A <strong>callback function</strong> is a function, which we
-                    define, that will get called when a specific event happens.
-                </p>
-                <p>
-                    We can define any behavior we want to in that callback
-                    function. In this case, we turn the background of the box a
-                    different color depending on whether the element is more or
-                    less than 90% visible.
-                </p>
-                <p>
-                    📝 <strong>Try it yourself!:</strong> Make a change so that
-                    the article text box changes color when <strong>50%</strong>
-                    of it is visible.
+                    To tackle socioeconomic barriers that disadvantage some racial groups, preferential selection and providing additional consideration for marginalized groups is a helpful way to reduce inequalities and expand educational and employment opportunities.
                 </p>
             </div>
         {/snippet}
 
         {#snippet scrolly()}
             <ObservedArticleText {callback} {options}>
-                <code>{"<ObservedArticleText>"}</code> example #1
+                <code>{"Different racial groups experience varied life circumstances"}</code> 
             </ObservedArticleText>
 
             <ObservedArticleText {callback} {options}>
-                <code>{"<ObservedArticleText>"}</code> example #2
+                <code>{"Affirmative action ensures that low-income, minority individuals are considered preferentially during university admissions"}</code> 
             </ObservedArticleText>
 
             <ObservedArticleText {callback} {options}>
-                <code>{"<ObservedArticleText>"}</code> example #3
+                <code>{"Ignoring racial backgrounds during university admissions could risk the continual exclusion of minority groups from educational opportunities."}</code> 
             </ObservedArticleText>
         {/snippet}
     </Scroller>

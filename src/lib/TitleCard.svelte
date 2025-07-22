@@ -11,7 +11,7 @@
 
 <style>
     .title-card {
-        background-color: #007052;
+        background-color: #207e8f;
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -19,23 +19,22 @@
         text-align: center;
         padding: 2rem;
         box-sizing: border-box;
-        font-family: "Inter", sans-serif;
+        font-family: "Garamond", sans-serif;
+        background-image: url('graduationcanva.png');
     }
 
     .content {
         max-width: 700px;
-        background-color: #034c36;
         padding: 2rem;
-        border: 6px solid #e3ff00;
-        border-radius: 2rem;
-        box-shadow: 16px 16px #188f70;
+
+    
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 4rem;
         margin: 0;
-        color: #e3ff00;
-        text-shadow: 1px 1px 0 #007052;
+        color: #ffffff;
+        text-shadow: 1px 1px 0 #5177a6;
     }
 
     p {

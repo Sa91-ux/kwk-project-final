@@ -7,13 +7,26 @@
 
     let options = {
         chart: {
-            type: "pie",
+            type: "column",
+            borderRadius:20,
         },
         title: {
-            text: "An Example Pie Chart",
+            text: "Poverty Percentages By Race in United States (Dec 2024)",
+        },
+
+        xAxis:{
+            categories:['Black','Hispanic','Asian','White'],
+            title:{
+                text:'Race',
+                style:{
+                    FontFamily: 'Garamond',
+                    fontSize: '1.5em'
+                }
+            }
+
         },
         plotOptions: {
-            pie: {
+            column: {
                 allowPointSelect: true,
                 dataLabels: [
                     {
@@ -39,30 +52,29 @@
         },
         series: [
             {
-                name: "Group",
+                name: "Poverty Percentage",
                 data: [
                     {
-                        name: "Group 1",
-                        y: 151,
+                        name: "Black",
+                        y: 25,
                     },
                     {
-                        name: "Group 2",
+                        name: "Hispanic",
                         sliced: true,
                         selected: true,
-                        y: 180,
+                        y: 29,
                     },
                     {
-                        name: "Group 3",
-                        y: 32,
+                        name: "Asian",
+                        y: 17,
                     },
                     {
-                        name: "Group 4",
-                        y: 103,
+                        name: "White",
+                        y: 13,
                     },
-                    {
-                        name: "Group 5",
-                        y: 77,
-                    },
+                    
+                
+                
                 ],
             },
         ],
@@ -76,63 +88,43 @@
                 <Chart {options} highcharts={Highcharts} />
             </div>
             <p>
-                Here's an example chart using
-                <a href="https://www.highcharts.com/">Highcharts</a>!
+                Poverty percentages from Black Wealth Data Center
+                <a href="https://blackwealthdata.org/explore/assets">BWDC</a> show the socieconomic disparities amongst races.
             </p>
             <p>
-                📈 <strong>Highcharts</strong> is a super-flexible library for
-                creating all kinds of charts. See demos of different chart types
-                <a href="https://www.highcharts.com/demo">here</a>.
+                 Affirmative Action aims to improve the representation of historically excluded groups in fields of education and employment. 
+                This involves the preferential selection of underrepresented populations for positions on the basis of race or ethnicity.
+                <a href="plato.stanford.edu/entries/affirmative-action/">Stanford Encyclopedia</a>.
+
+            
             </p>
             <p>
-                Since we're using Highcharts through Svelte, the syntax is a
-                little different from what you might see in the demos. But all
-                of Highcharts' functionality is available through the Highcharts
-                for Svelte package.
-            </p>
-            <p>
-                The configuration is done through the
-                <code>options</code> json object passed to the chart, which you'll
-                see in the source code for this template.
-            </p>
-            <p>
-                Use the
-                <a href="https://api.highcharts.com/highcharts/"
-                    >API reference</a
-                >
-                to understand what each element in the <code>options</code> object
-                does.
+                Hispanic and Black communities experience higher poverty percentages, it is thus, more common for member of these communities to have experienced financial hardship. Reducing barriers to access high-quality education could support them in breaking the cycle of poverty.
             </p>
         {/snippet}
 
         {#snippet scrolly()}
             <ArticleText>
-                <strong>Welcome to the KWK Data Scrollytelling Template!</strong
-                >
+                In 2023, the Supreme Court ruled that all university acceptance decisions must be race-blind
             </ArticleText>
 
             <ArticleText>
-                This is a <strong>basic example</strong> of how you might create
-                a scrollytelling piece using Svelte and Highcharts.
+                This had previously led to a a drastic decrease in minority group admissions which could negatively impact their future prospects and limit diversity in educational institutions. <a href= "https://www.npr.org/2023/06/29/1181138066/affirmative-action-supreme-court-decision">(npr.org)</a>
             </ArticleText>
 
             <ArticleText>
-                You can use this template as a <strong>starting point</strong>
-                for your project.
-                <br /><br />
-                Or, if you want to build something from scratch, you can use it as
-                a <strong>reference</strong> for specific functionality.
+                Affirmative Action can make educational opportunities more equitable by taking socioeconomic challenges such as poverty into consideration. 
             </ArticleText>
 
             <ArticleText>
-                This is <strong>just one way</strong> that scrollytelling can
-                look.
-                <br /><br />
-                <strong>
-                    If you use this template, be sure to modify it and make it
-                    your own!
-                </strong>
+                Affirmative Action recognises the systemic barriers which have made the same opportunities more difficult for individuals of marginalized racial backgrounds. 
             </ArticleText>
+
+            <ArticleText>
+                <strong>Let's now look at tuition payment statistics</strong> 
+            </ArticleText>
+
+        
         {/snippet}
     </Scroller>
 </div>

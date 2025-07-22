@@ -46,67 +46,37 @@
         {#snippet sticky()}
             <div>
                 <p>
-                    You can use the event triggered by an Intersection Observer
-                    any way you want!
+                    The removal of Affirmative Action policies has discouraged minority groups from applying to prestigious and selective institutions. 
                 </p>
 
                 <p>
-                    This section will show you how to use it to
-                    <strong>
-                        change something other than the element that triggered
-                        the event.
-                    </strong>
+                    The lack of diversity in educational institutions can have far-reaching consequences upon racial harmony and cooperation. Diversity and intercultural collaboration can reduce stereotypes and foster understanding amongst individuals of different backgrounds resulting in fewer conflicts and tensions. 
                 </p>
                 <p>
-                    To see this section in action again, you'll have to refresh
-                    the page.
+                    <a href = escholarship.org/uc/item/91w10c8>CREDE UC Berkeley</a>
                 </p>
             </div>
         {/snippet}
 
         {#snippet scrolly()}
             <ObservedArticleText callback={simpleCallback} {options}>
-                This article text is just like the ones from the last section.
-                <br /><br />
-                <strong>The next one will do something different.</strong>
+                Affirmative Action can promote interethnic relations
             </ObservedArticleText>
 
-            <ObservedArticleText callback={alertCallback} {options}>
-                This <code>{"<ArticleText>"}</code> component causes an alert to
-                show when scrolled into view!
-                <br /><br />
-                Notice that nothing changes about this particular
-                <code>{"<ArticleText>"}</code> component itself.
-                <br /><br />
-                <strong
-                    >You can use an Intersection Observer event to trigger
-                    changes:</strong
-                >
-                <ul>
-                    <li>the observed element itself</li>
-                    <li>in some other element</li>
-                    <li>or both</li>
-                </ul>
-            </ObservedArticleText>
+        
 
             <ObservedArticleText callback={simpleCallback} {options}>
-                Think of the Intersection Observer event trigger like any other
-                event:
-                <ul>
-                    <li>a <code>mouseover</code> event</li>
-                    <li>a <code>mouseclick</code> event</li>
-                    <li>a keyboard key being pressed</li>
-                </ul>
-                Any of these kinds of events can be used to trigger any action you
-                want to take on the page.
+                In an increasingly global world, diverse interactions are necessary to promote prosocial behaviour, enhance creativity and broaden horizons.
             </ObservedArticleText>
 
             <ObservedArticleText callback={simpleCallback} {options}>
                 <strong>
-                    🤔 How might you use this functionality to draw attention to
-                    something on your website?
+                    All of us would benefit from a more equitable and diverse community!
                 </strong>
             </ObservedArticleText>
         {/snippet}
     </Scroller>
 </div>
+
+
+<img src="Thank.png" alt="Thank you" width="1100">
